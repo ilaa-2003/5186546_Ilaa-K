@@ -1,0 +1,15 @@
+Open GitHub page:
+1. Sign up- if you are a new user, Or sign in using you're google account or through email id.
+2. Once entered, you can see a home page
+3. Create a new repository with a README file
+4. Go to settings-> 
+
+Config in Git bash
+Code-HTTPS_gitbash-git clone paste https
+Folder created
+cd folder
+assigment-how to write code or upload image in readme file
+git add .
+git commit -m "First commit"
+git push
+token paste
