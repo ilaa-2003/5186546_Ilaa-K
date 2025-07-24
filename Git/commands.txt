@@ -1,0 +1,16 @@
+Open GitHub page:
+1. Sign up- if you are a new user, Or sign in using you're google account or through email id.
+2. Once entered, you can see a home page
+3. Create a new repository(SupersetID_Name) with a README file
+4. Go to settings-> Developer settings-> Personal Access Token-> Token(classic)
+5. Select name and tick all the options visible
+6. Copy the token access(classic)generated.
+
+Config in Git bash
+Code-HTTPS-gitbash-git clone paste https
+Folder created
+cd folder
+git add .
+git commit -m "First commit"
+git push
+Paste the token for authentication and to connect local repository with GitHub

@@ -1,0 +1,232 @@
+SDLC:
+
+SDLC Phases
+
+What is SDLC?
+⦁	The Software Development Life Cycle (SDLC) is a systematic process for planning, designing, developing, testing, and deploying software.
+⦁	SDLC, or software development life cycle is a methodology that defines the entire procedure of software development step-by-step.
+
+
+Why and where it is used and how to implement it?
+
+Why SDLC is Used:
+
+⦁	To ensure high-quality software is delivered within cost and time constraints.
+⦁	To organize tasks among teams (developers, testers, designers, project managers).
+⦁	To minimize risks and errors by following structured steps.
+
+Where it is Used:
+
+⦁	In enterprise software development (e.g., banking systems, healthcare platforms).
+⦁	Web and mobile app development.
+⦁	IoT, AI, and cloud-based systems.
+
+How to Implement SDLC:
+
+⦁	Select the appropriate SDLC model (e.g., Agile for startups, Waterfall for well-defined projects).
+⦁	Follow each phase: Requirement → Design → Development → Testing → Deployment → Maintenance.
+⦁	Maintain proper documentation.
+⦁	Use tools like Jira, Git, Jenkins for tracking and CI/CD.
+
+
+1.	Requirement Gathering – Functional, Non- Functional:
+⦁	It involves collecting, analyzing, documenting, and validating all requirements from stakeholders (clients, end-users, and business teams) to ensure the software fulfills its intended purpose.
+
+Purpose of Requirement Gathering:
+⦁	Understanding Stakeholders Needs
+⦁	Defining the Scope
+⦁	Reducing Miscommunication
+⦁	Preventing Costly Changes
+
+Functional Requirements:
+
+Functional requirements define what the system must do — its features, behaviors, and interactions.
+
+Characteristics:
+⦁	Focuses on specific functions or features.
+⦁	Directly tied to the business logic and goals.
+⦁	Can be represented with use case diagrams or user stories.
+
+Examples:
+⦁	An e-commerce platform must allow adding products to a cart and performing secure checkout.
+⦁	The system must allow a user to register and log in using an email and password.
+
+
+Non-Functional Requirements (NFRs):
+
+Non-functional requirements define how the system should perform or behave, focusing on quality attributes rather than specific functionalities.
+
+Characteristics:
+⦁	Related to system performance, reliability, and user experience.
+⦁	Often called "Quality Attributes".
+
+Examples:
+⦁	Performance
+⦁	Availability
+⦁	Scalability
+⦁	Security
+⦁	Compliance
+
+
+2. Design- UML, Structural, Behavioural:
+
+What is UML?
+
+Unified Modeling Language (UML) is a standardized visual modeling language that is a versatile, flexible, and user-friendly method for visualizing a system's design. Software system artifacts can be specified, visualized, built, and documented with the use of UML.
+
+⦁	We use UML diagrams to show the behavior and structure of a system.
+⦁	UML helps software engineers, businessmen, and system architects with modeling, design, and analysis
+
+Types of UML:
+ Structural UML Diagrams:
+
+Structural UML diagrams are visual representations that depict the static aspects of a system, including its classes, objects, components, and their relationships, providing a clear view of the system's architecture.
+
+⦁	 Class Diagram:
+We use class diagrams to depict the static structure of a system by showing system's classes, their methods and attributes. Class diagrams also help us identify relationship between different classes or objects. 
+
+⦁	 Object Diagram:
+    An object diagram is similar to a class diagram except it shows the instances of classes in the system.
+    We depict actual classifiers and their relationships making the use of class diagrams.
+    On the other hand, an Object Diagram represents specific instances of classes and relationships between them at a point of time. 
+
+Behavioral UML Diagrams:
+
+Behavioral UML diagrams are visual representations that depict the dynamic aspects of a system, illustrating how objects interact and behave over time in response to events.
+
+ State Machine Diagrams:
+
+A state diagram is used to represent the condition of the system or part of the system at finite instances of time. It’s a behavioral diagram and it represents the behavior using finite state transitions.
+State diagrams are also referred to as State machines and State-chart Diagrams 
+
+ Use Case Diagrams:
+
+Use Case Diagrams are used to depict the functionality of a system or a part of a system.
+A use case is basically a diagram representing different scenarios where the system can be used.
+
+ Sequence Diagram:
+
+A sequence diagram simply depicts interaction between objects in a sequential order i.e. the order in which these interactions take place. 
+
+
+3. Development:
+⦁	At this stage, the fundamental development of the product starts
+⦁	For this, developers use a specific programming code as per the design in the DDS. Hence, it is important for the coders to follow the protocols set by the association.
+⦁	Conventional programming tools like compilers, interpreters, debuggers, etc. are also put into use at this stage. Some popular languages like C/C++, Python, Java, etc. are put into use as per the software regulations. 
+
+
+4.Testing:
+⦁	After the development of the product, testing of the software is necessary to ensure its smooth execution. 
+⦁	Therefore, at this stage, all the probable flaws are tracked, fixed, and retested. This ensures that the product confronts the quality requirements of SRS. 
+
+
+5.Deployment & Maintenance:
+⦁	After detailed testing, the conclusive product is released in phases as per the organization’s strategy. Then it is tested in a real industrial environment
+⦁	It is important to ensure its smooth performance. If it performs well, the organization sends out the product as a whole.
+⦁	After retrieving beneficial feedback, the company releases it as it is or with auxiliary improvements to make it further helpful for the customers. 
+
+
+SDLC Models: Waterfall, V-Model, Spiral, Iterative, Agile
+With the real-world application and where to use which model, advantages,
+limitations:
+
+1. Waterfall Model:
+
+Overview:
+
+The Waterfall Model is a linear sequential approach, where each phase (requirement, design, development, testing, deployment) must be completed before moving to the next phase.
+No overlapping between phases.
+
+Use Cases:
+⦁	Requirements are very well documented, clear and fixed.
+⦁	Product definition is stable.
+⦁	Technology is understood and is not dynamic
+Advantages:
+
+⦁	Simple and easy to manage.
+⦁	Phases are well-defined with specific deliverables.
+⦁	Ideal for smaller projects with stable requirements.
+
+Limitations:
+
+⦁	Inflexible to changes (requirements can't be modified once development starts).
+⦁	Late testing (bugs are found at the end).
+⦁	Not suitable for complex or evolving projects.
+
+2. V-Model (Verification and Validation Model)
+Overview:
+
+An extension of Waterfall where testing activities are planned parallel to each development phase.
+Each development stage has a corresponding test stage.
+
+Use Cases:
+⦁	Requirements are well defined, clearly documented and fixed.
+⦁	Product definition is stable.
+⦁	Technology is not dynamic and is well understood by the project team.
+Advantages:
+⦁	Early defect detection due to parallel testing.
+⦁	Emphasis on validation and verification.
+⦁	Suitable for projects with strict quality standards.
+
+Limitations:
+
+⦁	Like Waterfall, it's inflexible to changes once the project is underway.
+⦁	Not suitable for ongoing requirement changes.
+
+3. Spiral Model:
+Overview:
+Combines iterative development with risk analysis.
+Each iteration, called a "spiral," involves planning, risk analysis, engineering, and evaluation.
+Focuses heavily on prototyping and user feedback.
+
+Use Cases:
+⦁	When there is a budget constraint and risk evaluation is important.
+⦁	For medium to high-risk projects.
+⦁	Long-term project commitment because of potential changes to economic priorities as the requirements change with time.
+Advantages:
+⦁	Effective risk management.
+⦁	Continuous user involvement and prototyping.
+⦁	Allows flexibility and iterative improvements.
+
+Limitations:
+⦁	Expensive due to multiple iterations and risk analysis.
+⦁	Requires strong expertise in risk assessment.
+
+4. Iterative Model:
+Overview:
+
+Develops the software in small parts or iterations, each refining and improving the previous version.
+Feedback from each iteration is incorporated into the next cycle.
+
+Use Cases:
+⦁	Requirements of the complete system are clearly defined and understood.
+⦁	Major requirements must be defined; however, some functionalities or requested enhancements may evolve with time.
+⦁	There is a time to the market constraint.
+Advantages:
+⦁	Easier to manage changes.
+⦁	Early delivery of working software components.
+⦁	Continuous feedback improves quality.
+
+Limitations:
+⦁	Requires more planning and management.
+⦁	Can be resource-intensive due to repeated cycles.
+
+5. Agile Model:
+Overview:
+
+Agile is incremental and iterative, emphasizing collaboration, adaptability, and customer feedback.
+Work is divided into short iterations called sprints (2–4 weeks).
+
+Use Cases:
+⦁	Startups, e-commerce, and mobile app development.
+⦁	Projects where requirements change frequently.
+⦁	AI/ML projects where experimentation is needed.
+
+Advantages:
+⦁	Flexible and adaptable to changes.
+⦁	Continuous delivery of usable features.
+⦁	Encourages strong customer collaboration.
+
+Limitations:
+⦁	Requires experienced teams and close stakeholder involvement.
+⦁	Documentation is minimal, which might lead to challenges in long-term maintenance.
