@@ -5,3 +5,10 @@ Agile certification:
 
 Git Certification:
 ![Git Training] <img width="1103" height="725" alt="Screenshot 2025-07-25 211437" src="https://github.com/user-attachments/assets/f14b0c2b-6a90-4ad4-b3bc-8d5be6707904" />
+
+C Certification:
+![C beginner](https://github.com/user-attachments/assets/35e8728a-8677-4ad0-bae1-e231a0337fe1)
+![C Intermediate](https://github.com/user-attachments/assets/5318f896-e272-44a9-9448-71ff212012d6)
+
+
+
