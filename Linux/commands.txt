@@ -437,3 +437,8 @@ Linux commands(Ubuntu):
 431 chmod 462 s1.txt
 432 ls -l s1.txt
 433 history
+
+gcc sum.c square.c main.c -c(along with object file)
+link object file n get executable file
+gcc sum.o square.o main.o -o all.out
+./all.out
