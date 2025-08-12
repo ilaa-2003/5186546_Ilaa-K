@@ -16,31 +16,79 @@ char* rtrim(char*);
 int parse_int(char*);
 
 /*
- * Complete the 'pageCount' function below.
+ * Complete the 'gridChallenge' function below.
  *
- * The function is expected to return an INTEGER.
- * The function accepts following parameters:
- *  1. INTEGER n
- *  2. INTEGER p
+ * The function is expected to return a STRING.
+ * The function accepts STRING_ARRAY grid as parameter.
  */
 
-int pageCount(int n, int p) {
-    int fromFront = p / 2;
-    int fromBack = (n /2) -(p/2);
-    return fromFront < fromBack ? fromFront : fromBack;
+/*
+ * To return the string from the function, you should either do static allocation or dynamic allocation
+ *
+ * For example,
+ * char* return_string_using_static_allocation() {
+ *     static char s[] = "static allocation of string";
+ *
+ *     return s;
+ * }
+ *
+ * char* return_string_using_dynamic_allocation() {
+ *     char* s = malloc(100 * sizeof(char));
+ *
+ *     s = "dynamic allocation of string";
+ *
+ *     return s;
+ * }
+ *
+ */
+int cmp_char(const void *a, const void *b) {
+    return (*(char*)a - *(char*)b);
+}
+char* gridChallenge(int grid_count, char** grid) {
+        // Sort each row alphabetically
+    for (int i = 0; i < grid_count; i++) {
+        qsort(grid[i], strlen(grid[i]), sizeof(char), cmp_char);
+    }
+
+    // Check columns are sorted top to bottom
+    int n = grid_count;
+    int m = strlen(grid[0]);
+
+    for (int col = 0; col < m; col++) {
+        for (int row = 1; row < n; row++) {
+            if (grid[row][col] < grid[row - 1][col]) {
+                // Not sorted column
+                static char no[] = "NO";
+                return no;
+            }
+        }
+    }
+
+    static char yes[] = "YES";
+    return yes;
 }
 
 int main()
 {
     FILE* fptr = fopen(getenv("OUTPUT_PATH"), "w");
 
-    int n = parse_int(ltrim(rtrim(readline())));
+    int t = parse_int(ltrim(rtrim(readline())));
 
-    int p = parse_int(ltrim(rtrim(readline())));
+    for (int t_itr = 0; t_itr < t; t_itr++) {
+        int n = parse_int(ltrim(rtrim(readline())));
 
-    int result = pageCount(n, p);
+        char** grid = malloc(n * sizeof(char*));
 
-    fprintf(fptr, "%d\n", result);
+        for (int i = 0; i < n; i++) {
+            char* grid_item = readline();
+
+            *(grid + i) = grid_item;
+        }
+
+        char* result = gridChallenge(n, grid);
+
+        fprintf(fptr, "%s\n", result);
+    }
 
     fclose(fptr);
 

@@ -16,18 +16,57 @@ char* rtrim(char*);
 int parse_int(char*);
 
 /*
- * Complete the 'pageCount' function below.
+ * Complete the 'caesarCipher' function below.
  *
- * The function is expected to return an INTEGER.
+ * The function is expected to return a STRING.
  * The function accepts following parameters:
- *  1. INTEGER n
- *  2. INTEGER p
+ *  1. STRING s
+ *  2. INTEGER k
  */
 
-int pageCount(int n, int p) {
-    int fromFront = p / 2;
-    int fromBack = (n /2) -(p/2);
-    return fromFront < fromBack ? fromFront : fromBack;
+/*
+ * To return the string from the function, you should either do static allocation or dynamic allocation
+ *
+ * For example,
+ * char* return_string_using_static_allocation() {
+ *     static char s[] = "static allocation of string";
+ *
+ *     return s;
+ * }
+ *
+ * char* return_string_using_dynamic_allocation() {
+ *     char* s = malloc(100 * sizeof(char));
+ *
+ *     s = "dynamic allocation of string";
+ *
+ *     return s;
+ * }
+ *
+ */
+char* caesarCipher(char* s, int k) {
+        int len = strlen(s);
+    char* result = malloc((len + 1) * sizeof(char));
+
+    // Normalize k to be within [0, 25]
+    k = k % 26;
+
+    for (int i = 0; i < len; i++) {
+        char c = s[i];
+        if (c >= 'a' && c <= 'z') {
+            // Lowercase letter
+            result[i] = ((c - 'a' + k) % 26) + 'a';
+        } else if (c >= 'A' && c <= 'Z') {
+            // Uppercase letter
+            result[i] = ((c - 'A' + k) % 26) + 'A';
+        } else {
+            // Non-alphabetic characters stay the same
+            result[i] = c;
+        }
+    }
+
+    result[len] = '\0';
+    return result;
+
 }
 
 int main()
@@ -36,11 +75,13 @@ int main()
 
     int n = parse_int(ltrim(rtrim(readline())));
 
-    int p = parse_int(ltrim(rtrim(readline())));
+    char* s = readline();
 
-    int result = pageCount(n, p);
+    int k = parse_int(ltrim(rtrim(readline())));
 
-    fprintf(fptr, "%d\n", result);
+    char* result = caesarCipher(s, k);
+
+    fprintf(fptr, "%s\n", result);
 
     fclose(fptr);
 
